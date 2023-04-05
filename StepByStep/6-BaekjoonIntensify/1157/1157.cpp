@@ -9,7 +9,8 @@ int main()
     string s;
     cin >> s;
 
-    int alpha[26], cnt = 0;
+    int alpha[26] = {0};
+    int cnt = 0;
 
     for (int i = 0; i < s.length(); i++)
     {
