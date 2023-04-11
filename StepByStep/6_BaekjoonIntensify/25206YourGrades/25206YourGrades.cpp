@@ -1,80 +1,44 @@
 #include <iostream>
-#include <string>
+#include <map>
+#include <vector>
+#include <sstream> // string stream
 using namespace std;
 
 int main()
 {
-    string subject, grade;
-    int score, total_score;
+    map<string, double> score_grade = {
+        {"A+", 4.5}, {"A0", 4.0}, {"B+", 3.5}, {"B0", 3.0}, {"C+", 2.5}, {"C0", 2.0}, {"D+", 1.5}, {"D0", 1.0}, {"F", 0.0}};
 
+    string s, spl;
+    vector<string> subject;
+    // subject[0]은 과목명 subject[1]은 학점 subject[2]는 등급
+
+    double total = 0, total_score = 0;
+    // 전공 평점은 "학점 x 과목평점" / "학점 총합" 임.
     for (int i = 0; i < 20; i++)
     {
-        cin >> subject >> score >> grade;
-        switch (grade[0])
+        getline(cin, s);    // 한 줄로 받아
+        stringstream ss(s); // 문자열 s 를 stringstream 객체 ss로 만들고
+        while (getline(ss, spl, ' '))
+        { // ss에서 띄어쓰기를 기준으로 한 단어씩 spl 변수에 저장
+            subject.push_back(spl);
+        }
+        if (subject[2] == "P")
         {
+            subject.clear();
+            continue;
+        }
+        else
+        {
+            total_score += stod(subject[1]);                     // 학점의 총합 string to double 함수 이용
+            total += stod(subject[1]) * score_grade[subject[2]]; // map함수 이용
+            subject.clear();
         }
     }
 
-    double avg_score = total_score / total_credit;
-
-    if (avg_score >= 3.3 || total_credit >= 140)
-        cout << "YES" << endl;
-    else
-        cout << "NO" << endl;
+    cout << fixed;     // 실수를 고정 소수점으료 표기
+    cout.precision(6); // 정확도는 6자릿수까지
+    cout << total / total_score;
 
     return 0;
 }
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// #define FASTIO   \
-//     cin.tie(0);  \
-//     cout.tie(0); \
-//     ios_base::sync_with_stdio(0);
-// #define FOR(i, a, b) for (int i = (a); i <= (b); i++)
-// #define ROF(i, a, b) for (int i = (a); i >= (b); i--)
-// #define ll long long int
-// #define pii pair<int, int>
-// #define PQ priority_queue
-// #define LEN(v) int(v.size())
-// #define ALL(v) v.begin(), v.end()
-// #define INF int(2e9)
-// #define LINF ll(1e18)
-
-// map<string, double> mp;
-
-// int main()
-// {
-//     FASTIO;
-//     mp.insert({"A+", 4.5});
-//     mp.insert({"A0", 4.0});
-//     mp.insert({"B+", 3.5});
-//     mp.insert({"B0", 3.0});
-//     mp.insert({"C+", 2.5});
-//     mp.insert({"C0", 2.0});
-//     mp.insert({"D+", 1.5});
-//     mp.insert({"D0", 1.0});
-//     mp.insert({"F", 0.0});
-
-//     double result = 0;
-//     double score_sum = 0;
-
-//     FOR(i, 1, 20)
-//     {
-//         string name;
-//         double score;
-//         string grade;
-//         cin >> name >> score >> grade;
-//         if (grade == "P")
-//             continue;
-//         result += score * mp[grade];
-//         score_sum += score;
-//     }
-//     result /= score_sum;
-
-//     cout << fixed << setprecision(4);
-//     cout << result;
-
-//     return 0;
-// }
