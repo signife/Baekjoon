@@ -11,16 +11,16 @@ int main()
 
     string s, spl;
     vector<string> subject;
-    // subject[0]Àº °ú¸ñ¸í subject[1]Àº ÇĞÁ¡ subject[2]´Â µî±Ş
+    // subject[0]ì€ ê³¼ëª©ëª… subject[1]ì€ í•™ì  subject[2]ëŠ” ë“±ê¸‰
 
     double total = 0, total_score = 0;
-    // Àü°ø ÆòÁ¡Àº "ÇĞÁ¡ x °ú¸ñÆòÁ¡" / "ÇĞÁ¡ ÃÑÇÕ" ÀÓ.
+    // ì „ê³µ í‰ì ì€ "í•™ì  x ê³¼ëª©í‰ì " / "í•™ì  ì´í•©" ì„.
     for (int i = 0; i < 20; i++)
     {
-        getline(cin, s);    // ÇÑ ÁÙ·Î ¹Ş¾Æ
-        stringstream ss(s); // ¹®ÀÚ¿­ s ¸¦ stringstream °´Ã¼ ss·Î ¸¸µé°í
+        getline(cin, s);    // í•œ ì¤„ë¡œ ë°›ì•„
+        stringstream ss(s); // ë¬¸ìì—´ s ë¥¼ stringstream ê°ì²´ ssë¡œ ë§Œë“¤ê³ 
         while (getline(ss, spl, ' '))
-        { // ss¿¡¼­ ¶ç¾î¾²±â¸¦ ±âÁØÀ¸·Î ÇÑ ´Ü¾î¾¿ spl º¯¼ö¿¡ ÀúÀå
+        { // ssì—ì„œ ë„ì–´ì“°ê¸°ë¥¼ ê¸°ì¤€ìœ¼ë¡œ í•œ ë‹¨ì–´ì”© spl ë³€ìˆ˜ì— ì €ì¥
             subject.push_back(spl);
         }
         if (subject[2] == "P")
@@ -30,14 +30,14 @@ int main()
         }
         else
         {
-            total_score += stod(subject[1]);                     // ÇĞÁ¡ÀÇ ÃÑÇÕ string to double ÇÔ¼ö ÀÌ¿ë
-            total += stod(subject[1]) * score_grade[subject[2]]; // mapÇÔ¼ö ÀÌ¿ë
+            total_score += stod(subject[1]);                     // í•™ì ì˜ ì´í•© string to double í•¨ìˆ˜ ì´ìš©
+            total += stod(subject[1]) * score_grade[subject[2]]; // mapí•¨ìˆ˜ ì´ìš©
             subject.clear();
         }
     }
 
-    cout << fixed;     // ½Ç¼ö¸¦ °íÁ¤ ¼Ò¼öÁ¡À¸·á Ç¥±â
-    cout.precision(6); // Á¤È®µµ´Â 6ÀÚ¸´¼ö±îÁö
+    cout << fixed;     // ì‹¤ìˆ˜ë¥¼ ê³ ì • ì†Œìˆ˜ì ìœ¼ë£Œ í‘œê¸°
+    cout.precision(6); // ì •í™•ë„ëŠ” 6ìë¦¿ìˆ˜ê¹Œì§€
     cout << total / total_score;
 
     return 0;

@@ -1,4 +1,4 @@
-// ÀÔ·Â¿¡ ºóÄ­Àº ¾ø´Ù
+// ì…ë ¥ì— ë¹ˆì¹¸ì€ ì—†ë‹¤
 // col <= 5, 1<=row<=15
 #include <iostream>
 #include <vector>
@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 
-    vector<vector<char>> a(5, vector<char>(15, ' ')); // º¤ÅÍ ÃÊ±âÈ­ÇÏ¸é¼­ °ø¹éÃß°¡
+    vector<vector<char>> a(5, vector<char>(15, ' ')); // ë²¡í„° ì´ˆê¸°í™”í•˜ë©´ì„œ ê³µë°±ì¶”ê°€
     string s;
     for (int i = 0; i < 5; i++)
     {

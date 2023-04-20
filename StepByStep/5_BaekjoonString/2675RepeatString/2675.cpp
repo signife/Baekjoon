@@ -25,10 +25,10 @@ int main()
         cin >> repeat >> s;
         for (int k = 0; k < s.length(); k++)
         {
-            // s.length°¡ repeatÀÌ¿´´ø°Ô ¹®Á¦¿´À½
+            // s.lengthê°€ repeatì´ì˜€ë˜ê²Œ ë¬¸ì œì˜€ìŒ
             for (int j = 0; j < repeat; j++)
-                cout << s[k]; // s[j]¸é abcabcabc s[k]¸é aaabbbccc
-        }                     // ÀÌÁß FOR¹®À» µ¹¸®´Âµ¥ ¹Ù±ù FOR¹®ÀÇ IDX°¡ ¾È¿¡¼­ µ¹°Ô ÇÏ¸é
+                cout << s[k]; // s[j]ë©´ abcabcabc s[k]ë©´ aaabbbccc
+        }                     // ì´ì¤‘ FORë¬¸ì„ ëŒë¦¬ëŠ”ë° ë°”ê¹¥ FORë¬¸ì˜ IDXê°€ ì•ˆì—ì„œ ëŒê²Œ í•˜ë©´
         cout << endl;
     }
     return 0;

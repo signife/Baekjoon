@@ -23,7 +23,7 @@ int main()
         nums.push_back(stoi(i));
     }
 
-    // Àß¸øµÈ ÄÚµå
+    // ì˜ëª»ëœ ì½”ë“œ
     // for (const int &i : nums)
     // {
     //     int sex;
@@ -36,17 +36,17 @@ int main()
         i = temp;
     }
 
-    // Àß¸øµÈ ÄÚµå
+    // ì˜ëª»ëœ ì½”ë“œ
     // for (const int &i : nums)
     // {
     //     cout << nums[i] << endl;
     // }
-    int total = 0; // º¯¼ö ¼±¾ğÇÏ¸é¼­ µ¿½ÃÃÊ±âÈ­ ÇÒ¶§ += ¿¬»êÀÚ »ç¿ë ºÒ°¡´É
+    int total = 0; // ë³€ìˆ˜ ì„ ì–¸í•˜ë©´ì„œ ë™ì‹œì´ˆê¸°í™” í• ë•Œ += ì—°ì‚°ì ì‚¬ìš© ë¶ˆê°€ëŠ¥
     for (const int &i : nums)
     {
         total += i;
 
-    } // Å×½ºÆ® ÄÚµå
+    } // í…ŒìŠ¤íŠ¸ ì½”ë“œ
 
     cout << total % 10 << endl;
 

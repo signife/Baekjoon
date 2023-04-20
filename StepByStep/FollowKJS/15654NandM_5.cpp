@@ -10,7 +10,7 @@ bool visited[MAX];
 
 void dfs(int count)
 {
-    if (count == m) // ±Ê¿Ã∞° m
+    if (count == m) // Í∏∏Ïù¥Í∞Ä m
     {
         for (int i = 0; i < m; i++)
             cout << arr[i] << ' ';
@@ -23,7 +23,7 @@ void dfs(int count)
         {
             visited[i] = true;
             arr[count] = i;
-            dfs(count + 1); // ¿Á±Õ
+            dfs(count + 1); // Ïû¨Í∑Ä
             visited[i] = false;
         }
     }
@@ -34,8 +34,8 @@ void dfs(int count)
           {
               visited[i] = true;
               arr[count] = i;
-              dfs(count + 1); // ¿Á±Õ
+              dfs(count + 1); // Ïû¨Í∑Ä
               visited[i] = false;
           }
       }*/
-    // ø©±‚ø° ∏∏æ‡ π›∫ππÆ¿ª 1∫Œ≈Õ Ω√¿€«ÿº≠ <= n±Ó¡ˆ «œ¡ˆ æ ¿∏∏È, num[max∏¶ ∂« º±æ«ÿæﬂµ .]
+    // Ïó¨Í∏∞Ïóê ÎßåÏïΩ Î∞òÎ≥µÎ¨∏ÏùÑ 1Î∂ÄÌÑ∞ ÏãúÏûëÌï¥ÏÑú <= nÍπåÏßÄ ÌïòÏßÄ ÏïäÏúºÎ©¥, num[maxÎ•º Îòê ÏÑ†Ïñ∏Ìï¥ÏïºÎê®.]

@@ -11,7 +11,7 @@ int main()
 
     vector<int> v(n);
     int num = 1;
-    for (int &x : v) // ÂüÁ¶ÀÚ È°¿ë
+    for (int &x : v) // ì°¸ì¡°ì í™œìš©
     {
         x = num++;
     }

@@ -11,7 +11,7 @@ int main()
 
     vector<int> basket(n);
     int num = 1;
-    for (int &x : basket) // ÂüÁ¶ÀÚ È°¿ë
+    for (int &x : basket) // ì°¸ì¡°ì í™œìš©
     {
         x = num++;
     }
