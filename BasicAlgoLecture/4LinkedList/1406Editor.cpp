@@ -10,9 +10,8 @@ int main(void)
 
     list<char> l;
     for (auto c : start)
-    {
         l.push_back(c);
-    }
+
     auto iter = l.end();
 
     int n;
