@@ -1,0 +1,2 @@
+1012와 같은 문제 board x y z가 아니라
+board y x z로 넣어야 함.
